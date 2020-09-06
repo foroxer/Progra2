@@ -12,4 +12,4 @@ a1.puertas.append(p3)
 
 print(a1.toString())
 
-
+del a1
