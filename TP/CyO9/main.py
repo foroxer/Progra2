@@ -1,0 +1,1 @@
+#Realice un ejemplo en código donde se utilicen los métodos especiales init, new, del, str y cmp.
