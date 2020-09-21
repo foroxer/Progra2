@@ -11,4 +11,4 @@ else:
     for i in range(1,6):
         arr.append(str(i))
 
-print(arr);
+print(arr)
