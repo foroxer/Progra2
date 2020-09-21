@@ -60,7 +60,7 @@ class Campesino(Personaje):
         return self.cosecha
 
 
-p = Personaje()
+
 
 s = Soldado()
 c = Campesino()
