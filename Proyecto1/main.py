@@ -12,4 +12,10 @@ a1.puertas.append(p3)
 
 print(a1.toString())
 
+if ( True ) :
+    hola = "juan"
+
+if (hola == "juan"):
+    print("lala")
+
 del a1

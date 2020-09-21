@@ -5,3 +5,4 @@ class Puerta:
     def toString(self):
         msg = ' Puerta:{ color: ' + self.color + '}'
         return(msg)
+
