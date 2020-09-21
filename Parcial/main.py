@@ -8,9 +8,10 @@ class Personaje():
     def recibir_ataque(self, cantidad):
         if (cantidad < self.vida):
             self.vida -= cantidad
+            print('recibio un ataque, su vida quedo en ' + str(self.vida))
         else:
             self.vida = 0
-            print('el personaje esta sin vida')
+            print('el personaje se quedo sin vida')
 
     def mover(self, destino, velocidad):
         if (velocidad <= 0): return
@@ -42,10 +43,10 @@ class Soldado(Personaje):
     
     def __init__(self,vida = 100, posicion = 0, velocidad=0, ataque=0):
         super().__init__(vida, posicion ,velocidad)
-        print('Atacando')
         self.ataque = ataque
     
-    def atacar(self, personaje):
+    def atacar(self, personaje: Personaje):
+        print('Atacando')
         personaje.recibir_ataque(self.ataque)
 
 
@@ -62,6 +63,12 @@ class Campesino(Personaje):
 p = Personaje()
 
 s = Soldado()
+c = Campesino()
 s.mover(-9,1)
 s.mover(10,2)
+s.ataque = 70
+
+s.atacar(c)
+s.ataque = 40
+s.atacar(c)
 
