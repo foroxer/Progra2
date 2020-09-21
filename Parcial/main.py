@@ -19,7 +19,7 @@ class Personaje():
         # implementar-----------------------------------------------------------------
         loops = int(abs((self.posicion-destino))/velocidad)
         if (self.posicion > destino):
-            for x in range(loops):
+            for _ in range(loops):
                 print(self.posicion)
                 self.posicion -= velocidad
             print(self.posicion)
@@ -28,7 +28,7 @@ class Personaje():
                 print(self.posicion)
 
         elif(self.posicion < destino):
-            for x in range(loops):
+            for _ in range(loops):
                 print(self.posicion)
                 self.posicion += velocidad
             print(self.posicion)
