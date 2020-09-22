@@ -1,6 +1,6 @@
 class Personaje():
 
-    def __init__(self,nombre:str ,  vida=100, posicion=0, velocidad=0):
+    def __init__(self, nombre: str,  vida=100, posicion=0, velocidad=0):
         self.nombre = nombre
         self.vida = vida
         self.posicion = posicion
@@ -17,7 +17,7 @@ class Personaje():
     def mover(self, destino):
         if (self.velocidad <= 0):
             return
-        print(self.nombre +' esta moviendose desde ' + str(self.posicion) + ' hasta ' +
+        print(self.nombre + ' esta moviendose desde ' + str(self.posicion) + ' hasta ' +
               str(destino) + ' con una velocidad de ' + str(self.velocidad))
         # implementar-----------------------------------------------------------------
         loops = int(abs((self.posicion-destino))/self.velocidad)
@@ -47,22 +47,23 @@ class Personaje():
 
 class Soldado(Personaje):
 
-    def __init__(self,nombre:str, vida=100, posicion=0, velocidad=4, ataque=10):
-        super().__init__(nombre,vida, posicion, velocidad)
+    def __init__(self, nombre: str, vida=100, posicion=0, velocidad=4, ataque=10):
+        super().__init__(nombre, vida, posicion, velocidad)
         self.ataque = ataque
 
     def atacar(self, personaje: Personaje):
-        print(self.nombre + 'esta atacando a :' +personaje.nombre)
+        print(self.nombre + 'esta atacando a :' + personaje.nombre)
         personaje.recibir_ataque(self.ataque)
 
 
 class Campesino(Personaje):
-    def __init__(self,nombre:str, vida=100, posicion=0, velocidad=2, cosecha=0):
-        super().__init__(nombre,vida, posicion, velocidad)
+    def __init__(self, nombre: str, vida=100, posicion=0, velocidad=2, cosecha=0):
+        super().__init__(nombre, vida, posicion, velocidad)
         self.cosecha = cosecha
 
     def cosechar(self):
-        print('La cantidad cosechada por ' + self.nombre + ' fue de ' + str(self.cosecha))
+        print('La cantidad cosechada por ' +
+              self.nombre + ' fue de ' + str(self.cosecha))
         return self.cosecha
 
 
